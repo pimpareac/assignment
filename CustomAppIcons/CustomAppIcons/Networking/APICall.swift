@@ -32,6 +32,7 @@ enum APIError: Swift.Error {
     case invalidURL
     case httpCode(HTTPCode)
     case unexpectedResponse
+    case imageDownloadError
 }
 
 extension APIError: LocalizedError {
@@ -40,6 +41,7 @@ extension APIError: LocalizedError {
         case .invalidURL: return "Invalid URL"
         case let .httpCode(code): return "Unexpected HTTP code: \(code)"
         case .unexpectedResponse: return "Unexpected response from the server"
+        case .imageDownloadError: return "Error downloading image"
         }
     }
 }

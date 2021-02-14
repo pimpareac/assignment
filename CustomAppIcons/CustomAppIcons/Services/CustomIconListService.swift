@@ -17,10 +17,10 @@ protocol CustomIconListProvider {
 class CustomIconListService: CustomIconListProvider {
     private static let baseURL = "https://irapps.github.io"
     
-    private let webRepository: CustomIconListWebRepository?
+    private let webRepository: CustomIconListWebRepositoryProvider?
     private var subscriptions = Set<AnyCancellable>()
     
-    init(respository: CustomIconListWebRepository = CustomIconListWebRepository(session: URLSession.configuredURLSession(), baseURL: baseURL)) {
+    init(respository: CustomIconListWebRepositoryProvider = CustomIconListWebRepository(session: URLSession.configuredURLSession(), baseURL: baseURL)) {
         webRepository = respository
     }
     

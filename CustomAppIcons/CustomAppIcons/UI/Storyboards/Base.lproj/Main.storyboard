@@ -11,8 +11,9 @@
         <!--Custom Icons-->
         <scene sceneID="3Ca-yQ-uQ1">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2h-8G-E2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="lCI-Lo-532" customClass="CustomIconsListViewController" customModule="CustomAppIcons" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="auR-zi-pSD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="auR-zi-pSD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -23,7 +24,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Custom Icons" id="Uq4-Nb-lvM"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v2h-8G-E2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="389.85507246376812" y="-610.04464285714278"/>
         </scene>

@@ -23,7 +23,7 @@ class CustomIconsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.separatorStyle = .none
         tableView.register(nibForClass: CustomIconsTableViewCell.self)
         
         bindViewModel()

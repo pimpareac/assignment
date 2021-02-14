@@ -31,6 +31,8 @@
 		9247F67225D99B3500A2CD18 /* Networking+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F66F25D99B3500A2CD18 /* Networking+Helpers.swift */; };
 		9247F67825D99C7100A2CD18 /* AppIconListWebRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F67725D99C7100A2CD18 /* AppIconListWebRepositories.swift */; };
 		9247F67D25D99D5E00A2CD18 /* URLSession+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F67C25D99D5D00A2CD18 /* URLSession+Helper.swift */; };
+		9247F68525D9A40000A2CD18 /* ImageWebRepositoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F68425D9A40000A2CD18 /* ImageWebRepositoryProvider.swift */; };
+		9247F69025D9A69600A2CD18 /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F68F25D9A69600A2CD18 /* ImageDownloadService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		9247F66F25D99B3500A2CD18 /* Networking+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Networking+Helpers.swift"; sourceTree = "<group>"; };
 		9247F67725D99C7100A2CD18 /* AppIconListWebRepositories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconListWebRepositories.swift; sourceTree = "<group>"; };
 		9247F67C25D99D5D00A2CD18 /* URLSession+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Helper.swift"; sourceTree = "<group>"; };
+		9247F68425D9A40000A2CD18 /* ImageWebRepositoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWebRepositoryProvider.swift; sourceTree = "<group>"; };
+		9247F68F25D9A69600A2CD18 /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +135,8 @@
 		9247F5CA25D9798700A2CD18 /* CustomAppIcons */ = {
 			isa = PBXGroup;
 			children = (
-				9247F67625D99C7100A2CD18 /* Repositories */,
 				9247F66C25D99B3500A2CD18 /* Networking */,
+				9247F67625D99C7100A2CD18 /* Repositories */,
 				9247F65E25D986B500A2CD18 /* Services */,
 				9247F64D25D981C700A2CD18 /* Models */,
 				9247F61E25D97E6A00A2CD18 /* Helpers */,
@@ -250,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				9247F65F25D986E000A2CD18 /* CustomIconListService.swift */,
+				9247F68F25D9A69600A2CD18 /* ImageDownloadService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				9247F67725D99C7100A2CD18 /* AppIconListWebRepositories.swift */,
+				9247F68425D9A40000A2CD18 /* ImageWebRepositoryProvider.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				9247F64F25D981F200A2CD18 /* CustomIconListWebModel.swift in Sources */,
 				9247F60825D97B1E00A2CD18 /* CustomIconsListViewController.swift in Sources */,
 				9247F5CC25D9798700A2CD18 /* AppDelegate.swift in Sources */,
+				9247F68525D9A40000A2CD18 /* ImageWebRepositoryProvider.swift in Sources */,
 				9247F63225D9804900A2CD18 /* RoundableView.swift in Sources */,
 				9247F66025D986E100A2CD18 /* CustomIconListService.swift in Sources */,
 				9247F63725D9805D00A2CD18 /* UIImage+Helper.swift in Sources */,
@@ -419,6 +426,7 @@
 				9247F5CE25D9798700A2CD18 /* SceneDelegate.swift in Sources */,
 				9247F67125D99B3500A2CD18 /* WebRepository.swift in Sources */,
 				9247F63D25D9807600A2CD18 /* RoundedImageView.swift in Sources */,
+				9247F69025D9A69600A2CD18 /* ImageDownloadService.swift in Sources */,
 				9247F67025D99B3500A2CD18 /* APICall.swift in Sources */,
 				9247F65725D982AC00A2CD18 /* IconListViewModel.swift in Sources */,
 			);

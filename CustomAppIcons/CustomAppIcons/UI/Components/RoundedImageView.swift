@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable
 class RoundedImageView: UIImageView, RoundableView {
-    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+    @IBInspectable var cornerRadius: CGFloat = 10.0 {
         didSet {
             self.setNeedsLayout()
         }

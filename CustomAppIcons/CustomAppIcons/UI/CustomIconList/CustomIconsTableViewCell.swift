@@ -5,15 +5,29 @@
 //  Created by Amol Pimpare on 13/02/21.
 //
 
+import Combine
 import UIKit
 
 class CustomIconsTableViewCell: UITableViewCell {
     @IBOutlet private var containerView: UIView!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var subTitleLabel: UILabel!
-    @IBOutlet private var iconImageView: RoundedImageView!
+    @IBOutlet private var iconImageView: UIImageView!
     
-    private var viewModel: CustomIconViewModel?
+    private var cancellables: Set<AnyCancellable> = []
+    
+    var viewModel: CustomIconViewModel? {
+        didSet {
+            bind()
+        }
+    }
+    
+    private func bind() {
+        viewModel?.$image.sink { [weak self] image in
+            self?.iconImageView.image = image
+        }
+        .store(in: &cancellables)
+    }
     
     // MARK: - Setup
     
@@ -21,14 +35,7 @@ class CustomIconsTableViewCell: UITableViewCell {
         titleLabel.text = viewModel.title
         subTitleLabel.text = viewModel.subTitle
         
-        let renderRect = CGRect(origin: .zero,
-                                size: iconImageView.bounds.size)
-        if let image = UIImage(named: "place_holder") {
-            let rounded = image.rounded(withCornerRadius: iconImageView.cornerRadius,
-                                        renderRect: renderRect)
-            iconImageView.image = rounded
-        }
-        
         self.viewModel = viewModel
+        self.viewModel?.dowloadImageIfNeeded()
     }
 }

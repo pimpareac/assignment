@@ -7,10 +7,44 @@
 
 import UIKit
 
-struct CustomIconViewModel {
-    let title: String
-    let subTitle: String
-    let imageUrl: String
+class CustomIconViewModel: NSObject {
+    @Published var image: UIImage?
+    @Published var downloading = false
+        
+    var title: String?
+    var subTitle: String?
+    var imageUrl: String?
+    
+    var downloadService: ImageDownloadServiceProvider?
+    
+    init(with title: String, subTitle: String, imageUrl: String) {
+        super.init()
+        self.title = title
+        self.subTitle = subTitle
+        self.imageUrl = imageUrl
+    }
+    
+    func dowloadImageIfNeeded() {
+        guard let urlString = imageUrl, let url = URL(string: urlString) else {
+            return
+        }
+        
+        if downloadService == nil {
+            downloadService = ImageDownloadService()
+        }
+        
+        downloading = true
+        downloadService?.downloadImage(at: url) { [weak self] (result) in
+            switch result {
+            case .success(let image):
+                self?.image = image
+            case .failure:
+                break
+            }
+            
+            self?.downloading = false
+        }
+    }
 }
 
 class IconListViewModel: NSObject {
@@ -43,7 +77,7 @@ class IconListViewModel: NSObject {
     
     private func handleSucees(with webModel: CustomIconListWebModel) {
         appIconList = webModel.icons.compactMap {
-            CustomIconViewModel(title: $0.title,
+            CustomIconViewModel(with: $0.title,
                                 subTitle: $0.subtitle,
                                 imageUrl: $0.image)
         }
