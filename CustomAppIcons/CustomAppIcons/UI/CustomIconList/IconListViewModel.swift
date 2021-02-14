@@ -14,24 +14,47 @@ struct CustomIconViewModel {
 }
 
 class IconListViewModel: NSObject {
-    private var webModel: CustomIconListWebModel?
-    private var listService: CustomIconListService?
-    
     @Published var appIconList: [CustomIconViewModel] = []
     @Published var isLoading: Bool = true
     @Published var errorMessage: String?
+    
+    private var webModel: CustomIconListWebModel?
+    private var listService: CustomIconListService?
+    
+    // MARK: - Init
     
     required init(with service: CustomIconListService = CustomIconListService() ) {
         self.listService = service
     }
     
-    // MARK: - Network Requests
+    // MARK: - Network Request
     
     /// Fetch app icons with completion handler. Completion handler is optional
-    /// - Parameter completion: completion block to be called after fetch is complete.
-    func fetchAppIcons(_ completion: (() -> Void)? = nil) {
+    func fetchAppIcons() {
+        listService?.fetchAppIcons { [weak self] (result) in
+            switch result {
+            case .success(let webModel):
+                self?.handleSucees(with: webModel)
+            case .failure(let error):
+                self?.handle(error: error)
+            }
+        }
+    }
+    
+    private func handleSucees(with webModel: CustomIconListWebModel) {
+        appIconList = webModel.icons.compactMap {
+            CustomIconViewModel(title: $0.title,
+                                subTitle: $0.subtitle,
+                                imageUrl: $0.image)
+        }
+        
+        errorMessage = nil
         isLoading = false
-        errorMessage = "No Data"
-        completion?()
+    }
+    
+    private func handle(error: Error) {
+        errorMessage = error.localizedDescription
+        isLoading = false
+        appIconList = []
     }
 }

@@ -17,6 +17,8 @@ class CustomIconsListViewController: UITableViewController {
     
     private var cancellables: Set<AnyCancellable> = []
     
+    private var iconList: [CustomIconViewModel] = []
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -31,10 +33,7 @@ class CustomIconsListViewController: UITableViewController {
         super.viewWillAppear(animated)
         addSpinnerView()
         
-        viewModel.fetchAppIcons {
-            
-            self.tableView.reloadData()
-        }
+        viewModel.fetchAppIcons()
     }
     
     // MARK: - Binding
@@ -51,7 +50,8 @@ class CustomIconsListViewController: UITableViewController {
         }
         .store(in: &cancellables)
         
-        viewModel.$appIconList.sink { [weak self] (iconlist) in
+        viewModel.$appIconList.sink { [weak self] (list) in
+            self?.iconList = list
             self?.tableView.reloadData()
         }
         .store(in: &cancellables)
@@ -107,12 +107,12 @@ class CustomIconsListViewController: UITableViewController {
 
 extension CustomIconsListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.appIconList.count
+        return iconList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(CustomIconsTableViewCell.self, for: indexPath)
-        cell.updateCell(with: viewModel.appIconList[indexPath.row])
+        cell.updateCell(with: iconList[indexPath.row])
         return cell
     }
 }

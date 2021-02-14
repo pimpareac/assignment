@@ -26,6 +26,11 @@
 		9247F64F25D981F200A2CD18 /* CustomIconListWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F64E25D981F200A2CD18 /* CustomIconListWebModel.swift */; };
 		9247F65725D982AC00A2CD18 /* IconListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F65625D982AC00A2CD18 /* IconListViewModel.swift */; };
 		9247F66025D986E100A2CD18 /* CustomIconListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F65F25D986E000A2CD18 /* CustomIconListService.swift */; };
+		9247F67025D99B3500A2CD18 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F66D25D99B3500A2CD18 /* APICall.swift */; };
+		9247F67125D99B3500A2CD18 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F66E25D99B3500A2CD18 /* WebRepository.swift */; };
+		9247F67225D99B3500A2CD18 /* Networking+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F66F25D99B3500A2CD18 /* Networking+Helpers.swift */; };
+		9247F67825D99C7100A2CD18 /* AppIconListWebRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F67725D99C7100A2CD18 /* AppIconListWebRepositories.swift */; };
+		9247F67D25D99D5E00A2CD18 /* URLSession+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F67C25D99D5D00A2CD18 /* URLSession+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		9247F64E25D981F200A2CD18 /* CustomIconListWebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconListWebModel.swift; sourceTree = "<group>"; };
 		9247F65625D982AC00A2CD18 /* IconListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconListViewModel.swift; sourceTree = "<group>"; };
 		9247F65F25D986E000A2CD18 /* CustomIconListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconListService.swift; sourceTree = "<group>"; };
+		9247F66D25D99B3500A2CD18 /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		9247F66E25D99B3500A2CD18 /* WebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
+		9247F66F25D99B3500A2CD18 /* Networking+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Networking+Helpers.swift"; sourceTree = "<group>"; };
+		9247F67725D99C7100A2CD18 /* AppIconListWebRepositories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconListWebRepositories.swift; sourceTree = "<group>"; };
+		9247F67C25D99D5D00A2CD18 /* URLSession+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,8 @@
 		9247F5CA25D9798700A2CD18 /* CustomAppIcons */ = {
 			isa = PBXGroup;
 			children = (
+				9247F67625D99C7100A2CD18 /* Repositories */,
+				9247F66C25D99B3500A2CD18 /* Networking */,
 				9247F65E25D986B500A2CD18 /* Services */,
 				9247F64D25D981C700A2CD18 /* Models */,
 				9247F61E25D97E6A00A2CD18 /* Helpers */,
@@ -200,6 +212,7 @@
 		9247F61E25D97E6A00A2CD18 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9247F67C25D99D5D00A2CD18 /* URLSession+Helper.swift */,
 				9247F61F25D97E8600A2CD18 /* UITableView+Helper.swift */,
 				9247F63625D9805D00A2CD18 /* UIImage+Helper.swift */,
 				9247F62E25D9804900A2CD18 /* Protocols */,
@@ -239,6 +252,24 @@
 				9247F65F25D986E000A2CD18 /* CustomIconListService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9247F66C25D99B3500A2CD18 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9247F66D25D99B3500A2CD18 /* APICall.swift */,
+				9247F66E25D99B3500A2CD18 /* WebRepository.swift */,
+				9247F66F25D99B3500A2CD18 /* Networking+Helpers.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9247F67625D99C7100A2CD18 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9247F67725D99C7100A2CD18 /* AppIconListWebRepositories.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9247F67D25D99D5E00A2CD18 /* URLSession+Helper.swift in Sources */,
 				9247F64F25D981F200A2CD18 /* CustomIconListWebModel.swift in Sources */,
 				9247F60825D97B1E00A2CD18 /* CustomIconsListViewController.swift in Sources */,
 				9247F5CC25D9798700A2CD18 /* AppDelegate.swift in Sources */,
@@ -379,11 +411,15 @@
 				9247F66025D986E100A2CD18 /* CustomIconListService.swift in Sources */,
 				9247F63725D9805D00A2CD18 /* UIImage+Helper.swift in Sources */,
 				9247F63E25D9807600A2CD18 /* ShadowView.swift in Sources */,
+				9247F67825D99C7100A2CD18 /* AppIconListWebRepositories.swift in Sources */,
 				9247F63125D9804900A2CD18 /* ShadowableView.swift in Sources */,
 				9247F62025D97E8600A2CD18 /* UITableView+Helper.swift in Sources */,
+				9247F67225D99B3500A2CD18 /* Networking+Helpers.swift in Sources */,
 				9247F62925D9803900A2CD18 /* CustomIconsTableViewCell.swift in Sources */,
 				9247F5CE25D9798700A2CD18 /* SceneDelegate.swift in Sources */,
+				9247F67125D99B3500A2CD18 /* WebRepository.swift in Sources */,
 				9247F63D25D9807600A2CD18 /* RoundedImageView.swift in Sources */,
+				9247F67025D99B3500A2CD18 /* APICall.swift in Sources */,
 				9247F65725D982AC00A2CD18 /* IconListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

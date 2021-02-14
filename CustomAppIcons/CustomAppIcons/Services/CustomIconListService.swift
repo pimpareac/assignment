@@ -5,17 +5,38 @@
 //  Created by Amol Pimpare on 14/02/21.
 //
 
+import Combine
 import Foundation
 
 protocol CustomIconListProvider {
-    typealias FetchCompletion = ((Result<[AppIcon], Error>) -> Void)
-
+    typealias FetchCompletion = ((Result<CustomIconListWebModel, Error>) -> Void)
+    
     func fetchAppIcons(_ completion: @escaping FetchCompletion)
 }
 
-struct CustomIconListService: CustomIconListProvider {
+class CustomIconListService: CustomIconListProvider {
+    private static let baseURL = "https://irapps.github.io"
+    
+    private let webRepository: CustomIconListWebRepository?
+    private var subscriptions = Set<AnyCancellable>()
+    
+    init(respository: CustomIconListWebRepository = CustomIconListWebRepository(session: URLSession.configuredURLSession(), baseURL: baseURL)) {
+        webRepository = respository
+    }
     
     func fetchAppIcons(_ completion: @escaping FetchCompletion) {
-        // TODO: - Integrate network call
+        webRepository?.fetchAppIcons()
+            .receive(on: DispatchQueue.main)
+            .sink { result in
+                switch result {
+                case .finished: break
+                case .failure(let error):
+                    debugPrint("Error: \(error)")
+                    completion(.failure(error))
+                }
+            } receiveValue: { (webModel) in
+                completion(.success(webModel))
+            }
+            .store(in: &subscriptions)
     }
 }
