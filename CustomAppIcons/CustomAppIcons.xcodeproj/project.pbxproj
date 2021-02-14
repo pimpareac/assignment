@@ -99,13 +99,11 @@
 		9247F5CA25D9798700A2CD18 /* CustomAppIcons */ = {
 			isa = PBXGroup;
 			children = (
+				9247F60125D97A3C00A2CD18 /* Resources */,
 				9247F5CB25D9798700A2CD18 /* AppDelegate.swift */,
 				9247F5CD25D9798700A2CD18 /* SceneDelegate.swift */,
 				9247F5CF25D9798700A2CD18 /* ViewController.swift */,
 				9247F5D125D9798700A2CD18 /* Main.storyboard */,
-				9247F5D425D9798B00A2CD18 /* Assets.xcassets */,
-				9247F5D625D9798B00A2CD18 /* LaunchScreen.storyboard */,
-				9247F5D925D9798B00A2CD18 /* Info.plist */,
 			);
 			path = CustomAppIcons;
 			sourceTree = "<group>";
@@ -126,6 +124,16 @@
 				9247F5EF25D9798C00A2CD18 /* Info.plist */,
 			);
 			path = CustomAppIconsUITests;
+			sourceTree = "<group>";
+		};
+		9247F60125D97A3C00A2CD18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9247F5D425D9798B00A2CD18 /* Assets.xcassets */,
+				9247F5D625D9798B00A2CD18 /* LaunchScreen.storyboard */,
+				9247F5D925D9798B00A2CD18 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AT873UG7F9;
-				INFOPLIST_FILE = CustomAppIcons/Info.plist;
+				INFOPLIST_FILE = CustomAppIcons/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +466,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AT873UG7F9;
-				INFOPLIST_FILE = CustomAppIcons/Info.plist;
+				INFOPLIST_FILE = CustomAppIcons/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
