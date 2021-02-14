@@ -15,6 +15,14 @@
 		9247F5E325D9798C00A2CD18 /* CustomAppIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F5E225D9798C00A2CD18 /* CustomAppIconsTests.swift */; };
 		9247F5EE25D9798C00A2CD18 /* CustomAppIconsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F5ED25D9798C00A2CD18 /* CustomAppIconsUITests.swift */; };
 		9247F60825D97B1E00A2CD18 /* CustomIconsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F60725D97B1E00A2CD18 /* CustomIconsListViewController.swift */; };
+		9247F62025D97E8600A2CD18 /* UITableView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F61F25D97E8600A2CD18 /* UITableView+Helper.swift */; };
+		9247F62925D9803900A2CD18 /* CustomIconsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F62725D9803900A2CD18 /* CustomIconsTableViewCell.swift */; };
+		9247F62A25D9803900A2CD18 /* CustomIconsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9247F62825D9803900A2CD18 /* CustomIconsTableViewCell.xib */; };
+		9247F63125D9804900A2CD18 /* ShadowableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F62F25D9804900A2CD18 /* ShadowableView.swift */; };
+		9247F63225D9804900A2CD18 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F63025D9804900A2CD18 /* RoundableView.swift */; };
+		9247F63725D9805D00A2CD18 /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F63625D9805D00A2CD18 /* UIImage+Helper.swift */; };
+		9247F63D25D9807600A2CD18 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F63B25D9807600A2CD18 /* RoundedImageView.swift */; };
+		9247F63E25D9807600A2CD18 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F63C25D9807600A2CD18 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		9247F5ED25D9798C00A2CD18 /* CustomAppIconsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAppIconsUITests.swift; sourceTree = "<group>"; };
 		9247F5EF25D9798C00A2CD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9247F60725D97B1E00A2CD18 /* CustomIconsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsListViewController.swift; sourceTree = "<group>"; };
+		9247F61F25D97E8600A2CD18 /* UITableView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Helper.swift"; sourceTree = "<group>"; };
+		9247F62725D9803900A2CD18 /* CustomIconsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIconsTableViewCell.swift; sourceTree = "<group>"; };
+		9247F62825D9803900A2CD18 /* CustomIconsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomIconsTableViewCell.xib; sourceTree = "<group>"; };
+		9247F62F25D9804900A2CD18 /* ShadowableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowableView.swift; sourceTree = "<group>"; };
+		9247F63025D9804900A2CD18 /* RoundableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
+		9247F63625D9805D00A2CD18 /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
+		9247F63B25D9807600A2CD18 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		9247F63C25D9807600A2CD18 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,7 @@
 		9247F5CA25D9798700A2CD18 /* CustomAppIcons */ = {
 			isa = PBXGroup;
 			children = (
+				9247F61E25D97E6A00A2CD18 /* Helpers */,
 				9247F60525D97AC300A2CD18 /* UI */,
 				9247F61225D97CA200A2CD18 /* App */,
 				9247F60125D97A3C00A2CD18 /* Resources */,
@@ -146,7 +163,11 @@
 		9247F60625D97ACD00A2CD18 /* CustomIconList */ = {
 			isa = PBXGroup;
 			children = (
+				9247F63B25D9807600A2CD18 /* RoundedImageView.swift */,
+				9247F63C25D9807600A2CD18 /* ShadowView.swift */,
 				9247F60725D97B1E00A2CD18 /* CustomIconsListViewController.swift */,
+				9247F62725D9803900A2CD18 /* CustomIconsTableViewCell.swift */,
+				9247F62825D9803900A2CD18 /* CustomIconsTableViewCell.xib */,
 			);
 			path = CustomIconList;
 			sourceTree = "<group>";
@@ -166,6 +187,25 @@
 				9247F5D125D9798700A2CD18 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9247F61E25D97E6A00A2CD18 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9247F61F25D97E8600A2CD18 /* UITableView+Helper.swift */,
+				9247F63625D9805D00A2CD18 /* UIImage+Helper.swift */,
+				9247F62E25D9804900A2CD18 /* Protocols */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9247F62E25D9804900A2CD18 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9247F62F25D9804900A2CD18 /* ShadowableView.swift */,
+				9247F63025D9804900A2CD18 /* RoundableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +314,7 @@
 				9247F5D825D9798B00A2CD18 /* LaunchScreen.storyboard in Resources */,
 				9247F5D525D9798B00A2CD18 /* Assets.xcassets in Resources */,
 				9247F5D325D9798700A2CD18 /* Main.storyboard in Resources */,
+				9247F62A25D9803900A2CD18 /* CustomIconsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +341,14 @@
 			files = (
 				9247F60825D97B1E00A2CD18 /* CustomIconsListViewController.swift in Sources */,
 				9247F5CC25D9798700A2CD18 /* AppDelegate.swift in Sources */,
+				9247F63225D9804900A2CD18 /* RoundableView.swift in Sources */,
+				9247F63725D9805D00A2CD18 /* UIImage+Helper.swift in Sources */,
+				9247F63E25D9807600A2CD18 /* ShadowView.swift in Sources */,
+				9247F63125D9804900A2CD18 /* ShadowableView.swift in Sources */,
+				9247F62025D97E8600A2CD18 /* UITableView+Helper.swift in Sources */,
+				9247F62925D9803900A2CD18 /* CustomIconsTableViewCell.swift in Sources */,
 				9247F5CE25D9798700A2CD18 /* SceneDelegate.swift in Sources */,
+				9247F63D25D9807600A2CD18 /* RoundedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
