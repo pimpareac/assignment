@@ -23,7 +23,7 @@ class CustomIconsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorStyle = .none
+        
         tableView.register(nibForClass: CustomIconsTableViewCell.self)
         
         bindViewModel()
@@ -114,5 +114,9 @@ extension CustomIconsListViewController {
         let cell = tableView.dequeueReusableCell(CustomIconsTableViewCell.self, for: indexPath)
         cell.updateCell(with: iconList[indexPath.row])
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        tableView.separatorStyle = .none
     }
 }

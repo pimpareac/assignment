@@ -12,7 +12,7 @@ class CustomIconsTableViewCell: UITableViewCell {
     @IBOutlet private var containerView: UIView!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var subTitleLabel: UILabel!
-    @IBOutlet private var iconImageView: UIImageView!
+    @IBOutlet private var iconImageView: RoundedImageView!
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -24,11 +24,18 @@ class CustomIconsTableViewCell: UITableViewCell {
     
     private func bind() {
         viewModel?.$image.sink { [weak self] image in
-            self?.iconImageView.image = image
+            self?.updateIcon(with: image)
         }
         .store(in: &cancellables)
     }
     
+    private func updateIcon(with image: UIImage?) {
+        let renderRect = CGRect(origin: .zero,
+                                size: iconImageView.bounds.size)
+        
+        iconImageView.image = image?.rounded(withCornerRadius: 10, renderRect: renderRect)
+    }
+        
     // MARK: - Setup
     
     func updateCell(with viewModel: CustomIconViewModel) {

@@ -8,25 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Custom Icons-->
-        <scene sceneID="3Ca-yQ-uQ1">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v2h-8G-E2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableViewController id="lCI-Lo-532" customClass="CustomIconsListViewController" customModule="CustomAppIcons" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="auR-zi-pSD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="lCI-Lo-532" id="u9z-ab-TFJ"/>
-                            <outlet property="delegate" destination="lCI-Lo-532" id="02Z-Uy-CkD"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Custom Icons" id="Uq4-Nb-lvM"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="389.85507246376812" y="-610.04464285714278"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="A3t-2H-J7j">
             <objects>
@@ -38,12 +19,33 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="lCI-Lo-532" kind="relationship" relationship="rootViewController" id="F7q-jm-mGo"/>
+                        <segue destination="Pz8-Wg-voQ" kind="relationship" relationship="rootViewController" id="bzH-1A-BrD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4z-hI-1hK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-520.28985507246375" y="-610.04464285714278"/>
+        </scene>
+        <!--Custom Icons-->
+        <scene sceneID="aut-e6-see">
+            <objects>
+                <tableViewController id="Pz8-Wg-voQ" customClass="CustomIconsListViewController" customModule="CustomAppIcons" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CYi-if-kMF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Pz8-Wg-voQ" id="j51-Td-Ycr"/>
+                            <outlet property="delegate" destination="Pz8-Wg-voQ" id="jX9-GQ-Cj9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Custom Icons" largeTitleDisplayMode="always" id="d8g-HK-fIn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xgz-K8-aU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-587"/>
         </scene>
     </scenes>
     <resources>

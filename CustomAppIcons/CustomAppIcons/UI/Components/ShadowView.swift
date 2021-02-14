@@ -45,13 +45,6 @@ class ShadowView: UIView, ShadowableView {
         }
     }
     
-    private(set) lazy var shadowLayer: CAShapeLayer = {
-        let layer = CAShapeLayer()
-        self.layer.insertSublayer(layer, at: 0)
-        self.setNeedsLayout()
-        return layer
-    }()
-    
     // MARK: - View LifeCycle
     
     override func layoutSubviews() {

@@ -14,9 +14,7 @@ protocol ShadowableView: RoundableView {
     var shadowOffsetHeight: CGFloat { get set }
     var shadowOpacity: Float { get set }
     var shadowRadius: CGFloat { get set }
-    
-    var shadowLayer: CAShapeLayer { get }
-    
+        
     func setShadow()
 }
 
@@ -26,13 +24,13 @@ extension ShadowableView where Self: UIView {
     }
     
     func setShadow() {
-        shadowLayer.path = UIBezierPath(roundedRect: bounds,
-                                        cornerRadius: cornerRadius).cgPath
-        shadowLayer.fillColor = backgroundColor?.cgColor
-        shadowLayer.shadowColor = shadowColor.cgColor
-        shadowLayer.shadowPath = shadowLayer.path
-        shadowLayer.shadowOffset = CGSize(width: 0, height: 0)
-        shadowLayer.shadowOpacity = shadowOpacity
-        shadowLayer.shadowRadius = shadowRadius
+        let path = UIBezierPath(roundedRect: bounds,
+                                cornerRadius: cornerRadius).cgPath
+        layer.backgroundColor = backgroundColor?.cgColor
+        layer.shadowColor = shadowColor.cgColor
+        layer.shadowPath = path
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = shadowOpacity
+        layer.shadowRadius = shadowRadius
     }
 }
