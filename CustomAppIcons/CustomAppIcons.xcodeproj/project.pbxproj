@@ -154,6 +154,7 @@
 		9247F60525D97AC300A2CD18 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9247F64325D9816700A2CD18 /* Components */,
 				9247F61325D97CCA00A2CD18 /* Storyboards */,
 				9247F60625D97ACD00A2CD18 /* CustomIconList */,
 			);
@@ -163,8 +164,6 @@
 		9247F60625D97ACD00A2CD18 /* CustomIconList */ = {
 			isa = PBXGroup;
 			children = (
-				9247F63B25D9807600A2CD18 /* RoundedImageView.swift */,
-				9247F63C25D9807600A2CD18 /* ShadowView.swift */,
 				9247F60725D97B1E00A2CD18 /* CustomIconsListViewController.swift */,
 				9247F62725D9803900A2CD18 /* CustomIconsTableViewCell.swift */,
 				9247F62825D9803900A2CD18 /* CustomIconsTableViewCell.xib */,
@@ -206,6 +205,15 @@
 				9247F63025D9804900A2CD18 /* RoundableView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9247F64325D9816700A2CD18 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9247F63B25D9807600A2CD18 /* RoundedImageView.swift */,
+				9247F63C25D9807600A2CD18 /* ShadowView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
