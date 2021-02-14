@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		9247F5CC25D9798700A2CD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F5CB25D9798700A2CD18 /* AppDelegate.swift */; };
 		9247F5CE25D9798700A2CD18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F5CD25D9798700A2CD18 /* SceneDelegate.swift */; };
-		9247F5D025D9798700A2CD18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F5CF25D9798700A2CD18 /* ViewController.swift */; };
 		9247F5D325D9798700A2CD18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9247F5D125D9798700A2CD18 /* Main.storyboard */; };
 		9247F5D525D9798B00A2CD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9247F5D425D9798B00A2CD18 /* Assets.xcassets */; };
 		9247F5D825D9798B00A2CD18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9247F5D625D9798B00A2CD18 /* LaunchScreen.storyboard */; };
 		9247F5E325D9798C00A2CD18 /* CustomAppIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F5E225D9798C00A2CD18 /* CustomAppIconsTests.swift */; };
 		9247F5EE25D9798C00A2CD18 /* CustomAppIconsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F5ED25D9798C00A2CD18 /* CustomAppIconsUITests.swift */; };
+		9247F60825D97B1E00A2CD18 /* CustomIconsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247F60725D97B1E00A2CD18 /* CustomIconsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		9247F5C825D9798700A2CD18 /* CustomAppIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAppIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9247F5CB25D9798700A2CD18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9247F5CD25D9798700A2CD18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9247F5CF25D9798700A2CD18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9247F5D225D9798700A2CD18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9247F5D425D9798B00A2CD18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9247F5D725D9798B00A2CD18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		9247F5E925D9798C00A2CD18 /* CustomAppIconsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomAppIconsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9247F5ED25D9798C00A2CD18 /* CustomAppIconsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAppIconsUITests.swift; sourceTree = "<group>"; };
 		9247F5EF25D9798C00A2CD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9247F60725D97B1E00A2CD18 /* CustomIconsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +99,9 @@
 		9247F5CA25D9798700A2CD18 /* CustomAppIcons */ = {
 			isa = PBXGroup;
 			children = (
+				9247F60525D97AC300A2CD18 /* UI */,
+				9247F61225D97CA200A2CD18 /* App */,
 				9247F60125D97A3C00A2CD18 /* Resources */,
-				9247F5CB25D9798700A2CD18 /* AppDelegate.swift */,
-				9247F5CD25D9798700A2CD18 /* SceneDelegate.swift */,
-				9247F5CF25D9798700A2CD18 /* ViewController.swift */,
-				9247F5D125D9798700A2CD18 /* Main.storyboard */,
 			);
 			path = CustomAppIcons;
 			sourceTree = "<group>";
@@ -134,6 +132,40 @@
 				9247F5D925D9798B00A2CD18 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9247F60525D97AC300A2CD18 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9247F61325D97CCA00A2CD18 /* Storyboards */,
+				9247F60625D97ACD00A2CD18 /* CustomIconList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9247F60625D97ACD00A2CD18 /* CustomIconList */ = {
+			isa = PBXGroup;
+			children = (
+				9247F60725D97B1E00A2CD18 /* CustomIconsListViewController.swift */,
+			);
+			path = CustomIconList;
+			sourceTree = "<group>";
+		};
+		9247F61225D97CA200A2CD18 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9247F5CD25D9798700A2CD18 /* SceneDelegate.swift */,
+				9247F5CB25D9798700A2CD18 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9247F61325D97CCA00A2CD18 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9247F5D125D9798700A2CD18 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9247F5D025D9798700A2CD18 /* ViewController.swift in Sources */,
+				9247F60825D97B1E00A2CD18 /* CustomIconsListViewController.swift in Sources */,
 				9247F5CC25D9798700A2CD18 /* AppDelegate.swift in Sources */,
 				9247F5CE25D9798700A2CD18 /* SceneDelegate.swift in Sources */,
 			);
